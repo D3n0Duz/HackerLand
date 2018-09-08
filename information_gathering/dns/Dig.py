@@ -1,8 +1,5 @@
 from utility.ExecuteTerminal import execute_terminal
-
-
 # from utility.SaveResults import save_results
-from utility.SaveResults import save_results
 from utility.Seperators import seperator_single_line
 
 
@@ -69,6 +66,6 @@ class Dig:
     def get_results(self):
         return self.result
 
-#v = Dig("www.google.com", "8.8.8.8")
+# v = Dig("www.google.com", "8.8.8.8")
 
-#save_results(str(v.get_results()), "/home/neo/Workspace/HackerLand/information_gathering", "dig1.txt")
+# save_results(str(v.get_results()), "/home/neo/Workspace/HackerLand/information_gathering", "dig1.txt")
