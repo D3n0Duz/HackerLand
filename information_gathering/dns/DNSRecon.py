@@ -1,6 +1,7 @@
 from utility.ExecuteTerminal import execute_terminal
 
 # from utility.SaveResults import save_results
+from utility.Seperators import seperator_single_line
 
 '''
     # https://github.com/darkoperator/dnsrecon.git
@@ -20,11 +21,18 @@ class DNSRecon:
     def __init__(self, url, dnsrecon_path):
         self.url = url
         self.dnsrecon_path = dnsrecon_path
-        self.result = self.execute_dnsrecon()
+        self.result = self.execute_dnsrecon_zonetransfer()
+        self.result += seperator_single_line
+        self.result += self.execute_dnsrecon_bruteforce()
 
-    def execute_dnsrecon(self):
+    # Gives dns zone transfer
+    def execute_dnsrecon_zonetransfer(self):
         command = self.dnsrecon_path + "dnsrecon.py -a -d " + str(self.url).replace('www.', '')
-        return execute_terminal("dnsrecon", command)
+        return execute_terminal("dnsrecon-zonetransfer", command)
+
+    def execute_dnsrecon_bruteforce(self):
+        command = self.dnsrecon_path + "dnsrecon.py -t brt -d " + str(self.url).replace('www.', '')
+        return execute_terminal("dnsrecon-bruteforce", command)
 
     def get_results(self):
         return self.result
