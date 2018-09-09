@@ -5,6 +5,7 @@
 
     # https://www.elevenpaths.com/labstools/foca/index.html
     # FOCA (Fingerprinting Organizations with Collected Archives) is a tool used mainly to find metadata and hidden information in the documents its scans
+    # Since it's written in CS, you will need a Windows OS
 
     ######################################
     # What it does
@@ -26,5 +27,6 @@
     ######################################
 
     # Since it's a GUI, it's pretty straight forward (Entering project name, domain and date)
+    # https://www.youtube.com/watch?v=ZY5Wd60BHdc
 
 '''
