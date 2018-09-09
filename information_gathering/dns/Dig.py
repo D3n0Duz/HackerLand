@@ -1,5 +1,8 @@
+import socket
+
 from utility.ExecuteTerminal import execute_terminal
 from utility.Seperators import seperator_single_line
+
 # from utility.SaveResults import save_results
 
 '''
@@ -9,9 +12,8 @@ from utility.Seperators import seperator_single_line
 
 
 class Dig:
-    def __init__(self, url, ip):
+    def __init__(self, url):
         self.url = url
-        self.ip = ip
         self.result = self.execute_dig()
         self.result += seperator_single_line
         self.result += self.execute_dig_ns()
@@ -50,7 +52,7 @@ class Dig:
 
     # Gives DNS client, special referal, recursive resolver, root server and authoritative server (maps IP to name:PTR)
     def execute_dig_reverse_trace(self):
-        command = "dig +trace -x " + self.ip
+        command = "dig +trace -x " + str(socket.gethostbyname(str(self.url)))
         return execute_terminal("dig-reverse-trace", command)
 
     # Gives any discovered names
@@ -71,6 +73,7 @@ class Dig:
     def get_results(self):
         return self.result
 
-# v = Dig("www.google.com", "8.8.8.8")
+
+v = Dig("www.google.com")
 
 # save_results(str(v.get_results()), "/home/neo/Workspace/HackerLand/information_gathering", "dig1.txt")
