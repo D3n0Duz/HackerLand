@@ -30,6 +30,7 @@ class DNSRecon:
         command = self.dnsrecon_path + "dnsrecon.py -a -d " + str(self.url).replace('www.', '')
         return execute_terminal("dnsrecon-zonetransfer", command)
 
+    # Brute forces to discover
     def execute_dnsrecon_bruteforce(self):
         command = self.dnsrecon_path + "dnsrecon.py -t brt -d " + str(self.url).replace('www.', '')
         return execute_terminal("dnsrecon-bruteforce", command)
