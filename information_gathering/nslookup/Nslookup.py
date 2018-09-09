@@ -7,9 +7,9 @@ from utility.ExecuteTerminal import execute_terminal
 class Nslookup:
     def __init__(self, url):
         self.url = url
-        self.result = self.execute_whois()
+        self.result = self.execute_nslookup()
 
-    def execute_whois(self):
+    def execute_nslookup(self):
         command = "nslookup " + str(self.url).replace('www.', '')
         return execute_terminal("nslookup", command)
 
