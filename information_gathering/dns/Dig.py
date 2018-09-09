@@ -2,6 +2,11 @@ from utility.ExecuteTerminal import execute_terminal
 from utility.Seperators import seperator_single_line
 # from utility.SaveResults import save_results
 
+'''
+    # Install dig
+    # apt-get install -y dnsutils
+'''
+
 
 class Dig:
     def __init__(self, url, ip):

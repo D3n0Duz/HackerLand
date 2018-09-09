@@ -3,6 +3,11 @@ from utility.ExecuteTerminal import execute_terminal
 
 # from utility.SaveResults import save_results
 
+'''
+    # Install whois
+    # apt-get install whois
+'''
+
 
 class WhoIs:
     def __init__(self, url):
@@ -16,6 +21,6 @@ class WhoIs:
     def get_results(self):
         return self.result
 
-v = WhoIs("www.google.com")
+# v = WhoIs("www.google.com")
 
 # save_results(str(v.get_results()), "/home/neo/Workspace/HackerLand/information_gathering", "whois1.txt")
