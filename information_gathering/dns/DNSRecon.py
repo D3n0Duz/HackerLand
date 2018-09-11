@@ -1,9 +1,9 @@
 import socket
 
 from utility.ExecuteTerminal import execute_terminal
+from utility.Seperators import seperator_single_line
 
 # from utility.SaveResults import save_results
-from utility.Seperators import seperator_single_line
 
 '''
     # https://github.com/darkoperator/dnsrecon.git
@@ -12,7 +12,7 @@ from utility.Seperators import seperator_single_line
     # git clone https://github.com/darkoperator/dnsrecon.git
     
     # Install python packages
-    # pip install netaddr
+    # pip install netaddrfrom utility.Seperators import seperator_single_line
     # pip install dnspython
     # pip install lxml
     

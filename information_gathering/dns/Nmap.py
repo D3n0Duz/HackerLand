@@ -1,10 +1,9 @@
 import socket
 
 from utility.ExecuteTerminal import execute_terminal
-
+from utility.Seperators import seperator_single_line
 
 # from utility.SaveResults import save_results
-from utility.Seperators import seperator_single_line
 
 '''
     # Install whois

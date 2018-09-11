@@ -74,6 +74,6 @@ class Dig:
         return self.result
 
 
-v = Dig("www.google.com")
+# v = Dig("www.google.com")
 
 # save_results(str(v.get_results()), "/home/neo/Workspace/HackerLand/information_gathering", "dig1.txt")
