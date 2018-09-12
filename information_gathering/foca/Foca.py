@@ -3,9 +3,9 @@
     # What is FOCA
     ######################################
 
+    # You will need a Windows OS to run FOCA (yeah I know ...)
     # https://www.elevenpaths.com/labstools/foca/index.html
     # FOCA (Fingerprinting Organizations with Collected Archives) is a tool used mainly to find metadata and hidden information in the documents its scans
-    # Since it's written in CS, you will need a Windows OS
 
     ######################################
     # What it does
